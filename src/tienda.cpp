@@ -160,3 +160,43 @@ ostream& operator << (ostream &o, const Tienda *tienda)
     
     return o;
 }
+
+string Tienda::getNombre()
+{
+    return this->nombre;
+}
+
+void Tienda::setNombre(string nuevoNombre)
+{
+    strcpy(this->nombre, nuevoNombre.c_str());
+}
+
+string Tienda::getSitioWeb()
+{
+    return this->sitioWeb;
+}
+
+void Tienda::setSitioWeb(string nuevoSitioWeb)
+{
+    strcpy(this->sitioWeb, nuevoSitioWeb.c_str());
+}
+
+string Tienda::getLocalizacion()
+{
+    return this->localizacion;
+}
+
+void Tienda::setLocalizacion(string nuevoLocalizacion)
+{
+    strcpy(this->localizacion, nuevoLocalizacion.c_str());
+}
+
+string Tienda::getTelefono()
+{
+    return this->telefono;
+}
+
+void Tienda::setTelefono(string nuevoTelefono)
+{
+    strcpy(this->telefono, nuevoTelefono.c_str());
+}

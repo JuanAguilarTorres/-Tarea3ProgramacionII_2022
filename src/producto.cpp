@@ -1,6 +1,7 @@
 #include "producto.h"
 #include <iostream>
 #include <cstring>
+#include <sstream>
 
 Producto::Producto(int id, string nombre, int existencia)
 {
@@ -19,6 +20,15 @@ Producto::Producto()
 int Producto::obtenerId()
 {
     return this->id;
+}
+
+string Producto::obtenerString()
+{
+    string consulta = "";
+    std::stringstream consultaStream;  
+    consultaStream << this->id << " " << this->nombre << " " << this->existencia << " ";
+    consulta = consultaStream.str();
+    return consulta;
 }
 
 ostream& operator << (ostream &o, const Producto *empleado)
