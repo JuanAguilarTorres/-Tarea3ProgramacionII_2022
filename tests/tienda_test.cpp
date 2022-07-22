@@ -189,7 +189,13 @@ namespace
         Tienda *tiendaEsperada = new Tienda("TiendaA", "Tienda.com", "50m Norte", "12345678");
 
         Producto *producto1 = new Producto(1, "Cereal", 5);
+        Producto *producto2 = new Producto(2, "aaaa", 50);
+        Producto *producto3 = new Producto(3, "bbbb", 300);
+        Producto *producto4 = new Producto(4, "cccc", 10);
         tiendaEsperada->agregarProducto(producto1);
+        tiendaEsperada->agregarProducto(producto2);
+        tiendaEsperada->agregarProducto(producto3);
+        tiendaEsperada->agregarProducto(producto4);
 
         // Act - ejecute la operación
         // Escribir un archivo de prueba
@@ -230,6 +236,7 @@ namespace
 
         string esperado = "TiendaA, Sitio: Tienda.com, Ubicación: 50m Norte, número: 12345678, Productos: \n[1] - Cereal, Cantidad: 5\n"; 
         string salidaTiendaEsperada = streamSalidaTiendaEsperada.str();
+        cout << salidaTiendaEsperada << endl;
 
         // Primero, validar la salida de la Tienda esperada sea correcta
         EXPECT_EQ(esperado, salidaTiendaEsperada);
